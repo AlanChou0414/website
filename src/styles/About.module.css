@@ -1,0 +1,37 @@
+.section {
+  height: calc(100vh - 80px);
+  composes:flexCenter from './flex.module.css';
+  composes:directionRow from './flex.module.css';
+}
+.photo {
+  border-radius: 100%;
+  margin-right: 5rem;
+  max-width: 400px;
+  max-height: 400px;
+  min-width: 200px;
+  min-height: 200px;
+  box-shadow: 0 0 60px .3px #c9c9c981;
+  transition: .5s;
+  opacity: .8;
+}
+.photo:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+.content {
+  font-size: 20px;
+  line-height: 2rem;
+  letter-spacing: 2px;
+}
+.linkIcon {
+  text-align: center;
+  margin-top: 40px;
+}
+.linkIcon>a {
+  margin: 0 30px;
+}
