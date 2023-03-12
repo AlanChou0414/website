@@ -10,9 +10,9 @@
   max-height: 400px;
   min-width: 200px;
   min-height: 200px;
-  box-shadow: 0 0 60px .3px #c9c9c981;
+  box-shadow: 0 0 50px .2px #c2c2c2bf;
   transition: .5s;
-  opacity: .8;
+  opacity: .7;
 }
 .photo:hover {
   opacity: 1;

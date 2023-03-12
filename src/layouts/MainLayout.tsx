@@ -1,15 +1,14 @@
-import React from "react"
 import { Outlet } from "react-router-dom"
 import styles from '../styles/mainlayout.module.css'
 
 // components
-import Header from "../components/Header"
+import Navbar from "../components/Navbar"
 
 const MainLayout = () => {
   return (
     <>
       <main className={styles.container}>
-        <Header />
+        <Navbar />
         <Outlet />
       </main>
     </>

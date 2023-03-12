@@ -45,7 +45,7 @@ const photo = 'https://avatars.githubusercontent.com/u/99056343?v=4'
 const About = (props: Props) => {
   return (
     <section className={styles.section}>
-      <img className={styles.photo} src={photo} alt="Alan's Photo" />
+      <img className={styles.photo} src={photo} alt="Alan's Photo" title='Alan photo'/>
       <div className={styles.content}>
         <h1 className={styles.title}>Hello, Nice to see you.</h1>
         <p>{`I'm ${AlanChou.name}.`}</p>
@@ -55,13 +55,13 @@ const About = (props: Props) => {
         <p>{`This is my personal website.`}</p>
         <p>{`Hope you like it.`}</p>
         <div className={styles.linkIcon}>
-          <Link to='mailto:choushenglun0414@gmail.com'>
+          <Link to='mailto:choushenglun0414@gmail.com' title='Email link'>
             <TfiEmail size={30} />
           </Link>
-          <Link to='https://github.com/AlanChou0414' target='_blank'>
+          <Link to='https://github.com/AlanChou0414' target='_blank' title='GitHub link'>
             <BsGithub size={30} />
           </Link>
-          <Link to='https://www.cakeresume.com/alanchou1995' target='_blank'>
+          <Link to='https://www.cakeresume.com/alanchou1995' target='_blank' title='Resume link'>
             <FaAddressCard size={30} />
           </Link>
         </div>
