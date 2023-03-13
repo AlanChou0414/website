@@ -26,15 +26,17 @@
   height: 100%;
   letter-spacing: 1px;
 }
+.navItems>a {
+  transition: .3s;
+}
 .navItems>ul {
   font-size: 22px;
   margin: 0 20px;
   transition: .3s;
 }
 .navItems>ul:hover {
-  padding-bottom: 10px;
   border-bottom: 5px solid light;
 }
 .navItems>a:hover {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
