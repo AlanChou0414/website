@@ -7,20 +7,8 @@ import { TfiEmail } from 'react-icons/tfi'
 import { FaAddressCard } from 'react-icons/fa'
 
 // type
+import { PersonalInfoType } from '../type/type'
 type Props = {}
-
-interface PersonalInfoType {
-  name: string
-  from: string
-  photo: string
-  code: string[]
-  technologies: {
-    frontEnd: string[]
-    backEnd: string[]
-  }
-  databases: string[]
-  other: string[]
-}
 
 const AlanChou: PersonalInfoType = {
   name: 'Alan Chou',

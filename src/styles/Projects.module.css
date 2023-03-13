@@ -1,0 +1,41 @@
+@value dark from './colors.module.css';
+@value light from './colors.module.css';
+
+.section {
+  width: 100%;
+  padding: 50px;
+}
+.projectItems {
+  composes: flex from './flex.module.css';
+  composes: directionRow from './flex.module.css';
+  composes: justifyAround from './flex.module.css';
+  composes: alignItems from './flex.module.css';
+  margin: 30px 0;
+  border-bottom: .5px solid light;
+  padding: 50px 0;
+}
+.projectItems>img {
+  max-width: 350px;
+  height: auto;
+  min-width: 350px;
+  border-radius: 20px;
+}
+.projectContent {
+  max-width: 350px;
+  min-width: 350px;
+  letter-spacing: 1px;
+}
+.projectContent>a {
+  font-size: 30px;
+  font-weight: 700;
+  transition: .3s;
+}
+.projectContent>a:hover {
+  color: red;
+}
+.projectContent>li {
+  font-size: 18px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin: 15px 0;
+}
