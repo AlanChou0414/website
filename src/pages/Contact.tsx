@@ -99,7 +99,7 @@ const Contact = () => {
           <div className={styles.btn}>
             {
               isSending
-                ? <AiOutlineLoading className={styles.icon} size={35}/>
+                ? <AiOutlineLoading className={styles.icon} size={35} />
                 : <button>SEND</button>
             }
           </div>
