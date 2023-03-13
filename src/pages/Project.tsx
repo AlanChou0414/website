@@ -12,7 +12,7 @@ const Project = () => {
           <div className={styles.projectItems} key={project.title}>
             <img src={project.img} alt="project logo" />
             <div className={styles.projectContent}>
-              <Link to={project.link}>{project.title}</Link>
+              <Link to={project.link} target='_blank'>{project.title}</Link>
               {project.technology.map(technology => (
                 <li>{technology}</li>
               ))}
