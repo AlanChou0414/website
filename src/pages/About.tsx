@@ -12,6 +12,7 @@ type Props = {}
 interface PersonalInfoType {
   name: string
   from: string
+  photo: string
   code: string[]
   technologies: {
     frontEnd: string[]
@@ -22,8 +23,9 @@ interface PersonalInfoType {
 }
 
 const AlanChou: PersonalInfoType = {
-  name: 'AlanChou',
+  name: 'Alan Chou',
   from: 'Taichung Taiwan',
+  photo: 'https://avatars.githubusercontent.com/u/99056343?v=4',
   code: ['JavaScript', 'TypeScript'],
   technologies: {
     frontEnd: [
@@ -40,18 +42,16 @@ const AlanChou: PersonalInfoType = {
   other: ['Git', 'GitHub']
 }
 
-const photo = 'https://avatars.githubusercontent.com/u/99056343?v=4'
-
 const About = (props: Props) => {
   return (
     <section className={styles.section}>
-      <img className={styles.photo} src={photo} alt="Alan's Photo" title='Alan photo'/>
+      <img className={styles.photo} src={AlanChou.photo} alt="Alan's Photo" title='Alan photo' />
       <div className={styles.content}>
         <h1 className={styles.title}>Hello, Nice to see you.</h1>
-        <p>{`I'm ${AlanChou.name}.`}</p>
+        <p>{`My name is ${AlanChou.name}.`}</p>
         <p>{`I'm from ${AlanChou.from}.`}</p>
-        <p>{`I'm currently learning web development.`}</p>
-        <p>{`Now I'm code with ${AlanChou.code}.`}</p>
+        <p>{`I'm a frontend developer.`}</p>
+        <p>{`Now I'm coding with ${AlanChou.code[0]} and ${AlanChou.code[1]}.`}</p>
         <p>{`This is my personal website.`}</p>
         <p>{`Hope you like it.`}</p>
         <div className={styles.linkIcon}>

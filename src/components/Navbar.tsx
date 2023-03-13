@@ -12,7 +12,7 @@ const Navbar = () => {
         </h1>
         <li className={styles.navItems}>
           <ul><Link to='/'>About</Link></ul>
-          <ul><Link to='/project'>Project</Link></ul>
+          <ul><Link to='/projects'>Projects</Link></ul>
           <ul><Link to='/contact'>Contact</Link></ul>
         </li>
       </nav>

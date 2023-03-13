@@ -1,6 +1,5 @@
 .section {
-  height: calc(100vh - 80px);
-  composes:flexCenter from './flex.module.css';
+  composes:container from './container.module.css';
   composes:directionRow from './flex.module.css';
 }
 .photo {

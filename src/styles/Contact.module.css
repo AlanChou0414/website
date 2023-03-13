@@ -1,0 +1,89 @@
+@value light from './colors.module.css';
+@value dark from './colors.module.css';
+
+.section {
+  composes: container from './container.module.css';
+}
+.fieldset {
+  composes: flex from './flex.module.css';
+  composes: directionColumn from './flex.module.css';
+  padding: 30px 80px;
+  border-radius: 30px;
+}
+.fieldset>legend {
+  text-align: center;
+  font-size: 50px;
+}
+.fieldset>label {
+  font-size: 22px;
+  margin-top: 20px;
+}
+.fieldset>input {
+  font-size: 22px;
+  padding: 10px 20px;
+  width: 200px;
+  border-radius: 20px;
+  color: dark;
+  margin-top: 5px;
+}
+.fieldset>input[type='email'] {
+  width: 500px;
+  border: none;
+}
+.fieldset>textarea {
+  resize: none;
+  color: dark;
+  padding: 10px 20px;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 200px;
+  max-height: 200px;
+  font-size: 20px;
+  margin: 5px 0;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 15px;
+}
+.userName {
+  composes: flex from from './flex.module.css';
+  composes:directionRow from './flex.module.css';
+  composes: justifyBetween from './flex.module.css';
+}
+.userNameInput>label {
+  font-size: 22px;
+  margin-top: 20px;
+}
+.userNameInput>input {
+  font-size: 22px;
+  padding: 10px 20px;
+  width: 240px;
+  border-radius: 20px;
+  color: dark;
+  margin-top: 5px;
+  border: none;
+}
+.userNameInput {
+  composes: flex from from './flex.module.css';
+  composes: directionColumn from './flex.module.css';
+}
+.userNameInput>input[id='firstName'] {
+  margin-right: 5px;
+}
+.btn {
+  text-align: center;
+}
+.btn>button {
+  font-size: 22px;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  border:none;
+  border-radius:10px;
+  color: dark;
+  transition: .3s;
+}
+.btn>button:hover {
+  background: dark;
+  color: light;
+  border: .5px solid light;
+}
