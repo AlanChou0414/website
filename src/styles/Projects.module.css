@@ -14,7 +14,7 @@
   border-bottom: .5px solid light;
   padding: 50px 0;
 }
-.projectItems>img {
+.projectItems>a>img {
   max-width: 350px;
   height: auto;
   min-width: 350px;

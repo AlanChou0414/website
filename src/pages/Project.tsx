@@ -10,11 +10,13 @@ const Project = () => {
       {
         projects.map(project => (
           <div className={styles.projectItems} key={project.title}>
-            <img src={project.img} alt="project logo" />
+            <Link to={project.link} target='_blank'>
+              <img src={project.img} alt="project logo" />
+            </Link>
             <div className={styles.projectContent}>
               <Link to={project.link} target='_blank'>{project.title}</Link>
               {project.technology.map(technology => (
-                <li>{technology}</li>
+                <li key={technology}>{technology}</li>
               ))}
             </div>
           </div>
