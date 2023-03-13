@@ -26,6 +26,9 @@
   color: dark;
   margin-top: 5px;
 }
+.fieldset>input::placeholder {
+  color: #ccc;
+}
 .fieldset>input[type='email'] {
   width: 500px;
   border: none;
@@ -44,6 +47,9 @@
   border: none;
   margin-bottom: 15px;
 }
+.fieldset>textarea::placeholder {
+  color: #ccc;
+}
 .userName {
   composes: flex from from './flex.module.css';
   composes:directionRow from './flex.module.css';
@@ -61,6 +67,9 @@
   color: dark;
   margin-top: 5px;
   border: none;
+}
+.userNameInput>input::placeholder {
+  color: #ccc;
 }
 .userNameInput {
   composes: flex from from './flex.module.css';
