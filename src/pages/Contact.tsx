@@ -1,6 +1,10 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from '../styles/Contact.module.css'
 import emailjs from 'emailjs-com'
+
+// components
+import Alert from '../components/Alert'
 
 // icon
 import { AiOutlineLoading } from 'react-icons/ai'
@@ -16,7 +20,9 @@ const PUBLIC_KEY = import.meta.env.VITE_VAR_EMAILJS_PUBLIC_KEY
 
 const Contact = () => {
   const [inputValue, setInputValue] = useState<ContactType>({})
+  const [showAlert, setShowAlert] = useState(false)
   const [isSending, setIsSending] = useState(false)
+  const navigate = useNavigate()
 
   const handleInputValue = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputValue({
@@ -47,6 +53,11 @@ const Contact = () => {
       console.log(error)
     } finally {
       setIsSending(false)
+      setShowAlert(true)
+      setTimeout(() => {
+        setShowAlert(false)
+        navigate('/')
+      }, 1500)
     }
   }
 
@@ -105,6 +116,9 @@ const Contact = () => {
           </div>
         </fieldset>
       </form>
+      {
+        showAlert && <Alert />
+      }
     </section>
   )
 }

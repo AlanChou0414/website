@@ -47,18 +47,25 @@
   }
   .projectItems {
     flex-direction: column;
+    padding: 20px 0;
+    margin: 10px 0;
   }
   .projectContent {
-    max-width: 300px;
-    min-width: 300px;
+    max-width: 200px;
+    min-width: 200px;
     margin-top: 10px;
     text-align: center;
   }
+  .projectContent>a {
+    font-size: 25px;
+  }
   .projectContent>li {
     text-align: left !important;
+    font-size: 16px;
   }
   .projectItems>a>img {
-    max-width: 300px;
-    min-width: 350px;
+    text-align: center;
+    max-width: 250px;
+    min-width: 250px;
   }
 }

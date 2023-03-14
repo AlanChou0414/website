@@ -3,6 +3,7 @@
 
 .section {
   height: calc(100vh - 80px);
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,6 +107,10 @@
 
 /* Mobile version */
 @media (max-width:768px) {
+  .section {
+    height: 100%;
+    margin-top: 50px;
+  }
   .fieldset>legend {
     font-size: 35px;
   }
