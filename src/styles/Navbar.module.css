@@ -1,4 +1,5 @@
 @value light from './colors.module.css';
+@value dark from './colors.module.css';
 
 .header {
   width: 100%;
@@ -14,15 +15,15 @@
   color: red;
 }
 .nav {
-  composes: flex from './flex.module.css';
-  composes: alignItems from './flex.module.css';
-  composes: justifyBetween from './flex.module.css';
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
   margin: 0 30px;
 }
 .navItems {
-  composes: flex from './flex.module.css';
-  composes: alignItems from './flex.module.css';
+  display: flex;
+  align-items: center;
   height: 100%;
   letter-spacing: 1px;
 }
@@ -39,4 +40,39 @@
 }
 .navItems>a:hover {
   padding-bottom: 20px;
+}
+.menu {
+  display: none;
+}
+.dropdownMenu {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background: light;
+}
+.dropdownMenu>a {
+  width:100%;
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 1px 0;
+  color: dark !important;
+}
+
+/* Mobile version */
+@media (max-width:768px) {
+  .header .title {
+    font-size: 32px;
+    letter-spacing:2px;
+  }
+  .header .menu {
+    display: inline-block;
+  }
+  .header .navItems {
+    display: none;
+    flex-direction: column;
+  }
+  .header .dropdownMenu {
+    display: flex;
+  }
 }

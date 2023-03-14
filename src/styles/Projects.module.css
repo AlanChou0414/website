@@ -6,10 +6,10 @@
   padding: 50px;
 }
 .projectItems {
-  composes: flex from './flex.module.css';
-  composes: directionRow from './flex.module.css';
-  composes: justifyAround from './flex.module.css';
-  composes: alignItems from './flex.module.css';
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   margin: 30px 0;
   border-bottom: .5px solid light;
   padding: 50px 0;
@@ -38,4 +38,27 @@
   word-wrap: break-word;
   word-break: break-all;
   margin: 15px 0;
+}
+
+/* Mobile version */
+@media (max-width:768px) {
+  .section {
+    padding: 0;
+  }
+  .projectItems {
+    flex-direction: column;
+  }
+  .projectContent {
+    max-width: 300px;
+    min-width: 300px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .projectContent>li {
+    text-align: left !important;
+  }
+  .projectItems>a>img {
+    max-width: 300px;
+    min-width: 350px;
+  }
 }

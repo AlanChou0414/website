@@ -1,6 +1,9 @@
 .section {
-  composes:container from './container.module.css';
-  composes:directionRow from './flex.module.css';
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .photo {
   border-radius: 100%;
@@ -33,4 +36,31 @@
 }
 .linkIcon>a {
   margin: 0 30px;
+}
+
+/* Mobile version */
+@media (max-width:768px) {
+  .section {
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+  }
+  .photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    opacity: 1;
+  }
+  .title {
+    margin: 10px 0;
+    font-size: 28px;
+  }
+  .content {
+    font-size: 18px;
+    margin:10px 0;
+  }
+  .linkIcon {
+    margin-top: 15px;
+  }
 }
