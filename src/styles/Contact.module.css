@@ -106,6 +106,10 @@
 
 /* Mobile version */
 @media (max-width:768px) {
+  .section {
+    height: 100%;
+    margin-top: 50px;
+  }
   .fieldset>legend {
     font-size: 35px;
   }
