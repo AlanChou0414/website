@@ -2,12 +2,15 @@
 @value dark from './colors.module.css';
 
 .section {
-  composes: container from './container.module.css';
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fieldset {
-  composes: flex from './flex.module.css';
-  composes: directionColumn from './flex.module.css';
-  padding: 30px 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
   border-radius: 30px;
 }
 .fieldset>legend {
@@ -21,7 +24,6 @@
 .fieldset>input {
   font-size: 22px;
   padding: 10px 20px;
-  width: 200px;
   border-radius: 20px;
   color: dark;
   margin-top: 5px;
@@ -30,17 +32,12 @@
   color: #ccc;
 }
 .fieldset>input[type='email'] {
-  width: 500px;
   border: none;
 }
 .fieldset>textarea {
   resize: none;
   color: dark;
   padding: 10px 20px;
-  min-width: 500px;
-  max-width: 500px;
-  min-height: 200px;
-  max-height: 200px;
   font-size: 20px;
   margin: 5px 0;
   border-radius: 30px;
@@ -51,9 +48,9 @@
   color: #ccc;
 }
 .userName {
-  composes: flex from from './flex.module.css';
-  composes:directionRow from './flex.module.css';
-  composes: justifyBetween from './flex.module.css';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .userNameInput>label {
   font-size: 22px;
@@ -62,18 +59,17 @@
 .userNameInput>input {
   font-size: 22px;
   padding: 10px 20px;
-  width: 240px;
   border-radius: 20px;
   color: dark;
-  margin-top: 5px;
+  margin: 5px;
   border: none;
 }
 .userNameInput>input::placeholder {
   color: #ccc;
 }
 .userNameInput {
-  composes: flex from from './flex.module.css';
-  composes: directionColumn from './flex.module.css';
+  display: flex;
+  flex-direction: column;
 }
 .userNameInput>input[id='firstName'] {
   margin-right: 5px;
@@ -105,5 +101,23 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Mobile version */
+@media (max-width:768px) {
+  .fieldset>legend {
+    font-size: 35px;
+  }
+  .fieldset>textarea {
+    padding: 10px 20px; 
+    font-size: 18px;
+  }
+  .userName {
+    flex-direction: column;
+  }
+  .btn>button {
+    width: 100px;
+    height: 35px;
   }
 }
